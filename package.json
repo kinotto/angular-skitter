@@ -1,9 +1,9 @@
 {
-  "name": "geonames.js",
-  "version": "1.0.3",
+  "name": "angular-skitter",
+  "version": "1.0.1",
   "homepage": "https://github.com/kinotto/geonames.js",
-  "description": "angular wrapper for the library skitter.js",
-  "main": "src/geonames.js",
+  "description": "beautiful slider for angularJS build on top skitter.js",
+  "main": "src/skitter.js",
   "directories": {
     "test": "test"
   },
@@ -13,16 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kinotto/geonames.js.git"
+    "url": "git+https://github.com/kinotto/angular-skitter.git"
   },
   "author": "Karim Abdelcadir <kinotto88@yahoo.it>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kinotto/geonames.js/issues"
-  },
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "request": "^2.80.0"
+    "url": "https://github.com/kinotto/angular-skitter/issues"
   },
   "devDependencies": {
     "chai": "^3.5.0",

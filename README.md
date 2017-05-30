@@ -1,5 +1,2 @@
 # angular-skitter
-image slider built on top skitter.js asdasd
-asd
-asdsads
-asdsadsa
+image slider built on top skitter.js
