@@ -1,3 +1,12 @@
+/**
+ * Angular Skitter Slider
+ * @name skitter.js
+ * @description Slideshow
+ * @author Karim Abdelcadir - Stefano Vollono
+ * @version 1.0.0
+ * @license MIT
+ * @example https://kinotto.github.io/angular-skitter/examples/demo-01.html
+ */
 (function (angular, $) {
     'use strict';
 
