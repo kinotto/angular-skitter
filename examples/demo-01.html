@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="skitter">
+<head>
+    <link type="text/css" href="../bower_components/skitter-slideshow/dist/skitter.css" media="all" rel="stylesheet" />
+    <title>Angular Skitter</title>
+    <description></description>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
+    <script src="../bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <!--<script src="src/jquery-load-polyfill.js"></script>-->
+    <script src="../bower_components/skitter-slideshow/src/jquery.skitter.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../src/skitter.directive.js"></script>
+    <script type="text/javascript">
+
+        angular
+            .module('skitter')
+            .controller('skitterCtrl', skitterCtrl);
+
+        skitterCtrl.$inject = ['$scope'];
+        function skitterCtrl ($scope) {
+            $scope.photos = [
+                {
+                    src: 'https://visualhunt.com/photos/l/1/dawn-sun-mountain-landscape.jpg',
+                    title: 'Title 1',
+                    description: 'description 2',
+                    url: 'http://www.google.com'
+                },
+                {
+                    src: 'https://visualhunt.com/photos/l/1/aurora-borealis-over-mountains-at-night.jpg',
+                    title: 'Title 1',
+                    description: 'description 2',
+                    url: 'http://www.facebook.com'
+                }
+            ];
+
+            $scope.skitterOption = {
+                auto_play: false,
+                theme: "round",
+                navigation: true
+            }
+        };
+
+
+  </script>
+
+</head>
+<body ng-controller="skitterCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ng-skitter items="photos" options="skitterOption" style="height: 200px"></ng-skitter>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

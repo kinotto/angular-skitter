@@ -4,11 +4,17 @@
   "homepage": "www.karimabdelcadir.com",
   "description": "slider directive for angular based on jQuery Skitter",
   "authors": [
-    "Karim Abdelcadir <kinotto88@yahoo.it>"
+    "Karim Abdelcadir <kinotto88@yahoo.it>",
+    "Stefano Vollono <stefanovollono@gmail.com>"
   ],
   "main": "src/skitter.directive.js",
   "keywords": [
-    "skitter"
+    "angular skitter",
+    "skitter",
+    "jQuery slider",
+    "slideshow",
+    "angular",
+    "jQuery"
   ],
   "license": "MIT",
   "ignore": [
