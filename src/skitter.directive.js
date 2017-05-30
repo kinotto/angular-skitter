@@ -1,16 +1,25 @@
 (function () {
     'use strict';
 
-    angular.module('skitter', [])
-    .directive('ngSkitter', SkitterDirective);
+    angular
+        .module('skitter', [])
+        .directive('ngSkitter', SkitterDirective);
 
     function SkitterDirective() {
         return {
             restrict: 'EA',
             replace: true,
-            template: '<div class="skitter skitter-large" ><ul><li ng-repeat="item in items"> '
-            +'<a href="#cut"><img src="{{item.url}}" class="cut" /></a><div class="label_text">'
-            +'<p>{{item.text}}</p></div></li></ul></div>',
+            template:   '<div class="skitter skitter-large">' +
+                            '<ul>' +
+                                '<li ng-repeat="item in items">' +
+                                    '<a href="{{item.url}}"><img src="{{item.src}}" class="cut" /></a>' +
+                                    '<div class="label_text">' +
+                                        '<p>{{item.title}}</p>' +
+                                        '<p>{{item.description}}</p>' +
+                                    '</div>' +
+                                '</li>' +
+                            '</ul>' +
+                        '</div>',
             scope: {
                 items: '=',
                 options: '='
