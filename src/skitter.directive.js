@@ -12,7 +12,7 @@
             template:   '<div class="skitter skitter-large">' +
                             '<ul>' +
                                 '<li ng-repeat="item in items">' +
-                                    '<a href="{{item.url}}"><img src="{{item.src}}" class="cut" /></a>' +
+                                    '<a href="{{item.url}}"><img src="{{item.src}}" /></a>' +
                                     '<div class="label_text">' +
                                         '<p>{{item.title}}</p>' +
                                         '<p>{{item.description}}</p>' +
