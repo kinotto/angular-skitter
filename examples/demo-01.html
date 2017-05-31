@@ -93,7 +93,10 @@
                     <h3>Slider directive for angular 1.x based on jQuery Skitter. A jquery slider responsive with multiple transitions and customization.</h3>
                 </header>
 
-                <ng-skitter items="photos" options="skitterOption"></ng-skitter>
+                <ng-skitter items="photos" options="skitterOption">
+                    <p><strong>{{item.title}}</strong></p>
+                    <p>{{item.description}}</p>
+                </ng-skitter>
             </div>
         </div>
     </div>
