@@ -3,6 +3,7 @@ module.exports = {
 		app: 'dist'
 	},
 	src: {
-		lib: 'src/geonames.js'
+		lib: 'src/skitter.js'
 	}
 };
+

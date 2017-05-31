@@ -5,6 +5,10 @@ var livereload = require('gulp-livereload');
 var requireDir = require('require-dir');
 var tasks = requireDir('gulp', {recurse: true});
 var util = require('gulp-util');
+var useref        = require('gulp-useref');
+var gulpIf        = require('gulp-if');
+var uglify = require('gulp-uglify');
+var htmlmin       = require('gulp-htmlmin');
 
 gulp.task('express', function() {
   var express = require('express');
@@ -36,8 +40,17 @@ gulp.task('default', ['watch','express'], function() {
 
 });
 
+//gulp.task('dist', sync.sync(['cleanBuild', ['usemin']]), function(){
 
+//});
 
-gulp.task('dist', sync.sync(['cleanBuild', ['usemin']]), function(){
-
+gulp.task('dist', function (callback) {
+    return gulp
+        .src('examples/*.html')
+        .pipe(useref())
+        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('*.html', htmlmin({collapseWhitespace: true, minifyCSS:true})))
+        .pipe(gulp.dest('dist'))
 });
+
+
