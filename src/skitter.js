@@ -15,42 +15,52 @@
     .directive('ngSkitter', SkitterDirective)
     .service('SkitterService', SkitterService);
 
-    SkitterDirective.$inject = ['SkitterService'];
+    SkitterDirective.$inject = ['SkitterService', '$compile', '$timeout'];
     SkitterService.$inject = [];
 
-    function SkitterDirective(SkitterService) {
-        return {
-            restrict: 'EA',
+    function SkitterDirective(SkitterService, $compile, $timeout) {
+
+        var template = '<div class="skitter">' +
+                         '<ul>' +
+                            '<li ng-repeat="item in items">' +
+                                '<a href="{{item.url}}"><img src="{{item.src}}" /></a>' +
+                                '<div class="label_text">' +
+                                '</div>' +
+                            '</li>' +
+                        '</ul>' +
+                    '</div>';
+        var ddo = {
+            restrict: 'E',
             scope: {
                 items: '=',
                 options: '='
             },
-            transclude: true,
-            replace: true,
-            template:   '<div class="skitter">' +
-                            '<ul>' +
-                                '<li ng-repeat="item in items">' +
-                                    '<a href="{{item.url}}"><img src="{{item.src}}" /></a>' +
-                                    '<div class="label_text">' +
-                                        '<span ng-transclude></span>' +
-                                    '</div>' +
-                                '</li>' +
-                            '</ul>' +
-                        '</div>',
+            compile: function(tElement, tAttributes, transclude){
+              var transclude = tElement.html();
+              var tpl = angular.element(template);
+              tpl.find('.label_text').append(transclude);
 
-            link: function(scope, elem, attrs) {
+              return function(scope, elem, attrs) {
 
                 var sharedOptions = SkitterService.getOptions();
                 var options = $.extend(sharedOptions, scope.options || {});
+                var compiledContent = $compile(tpl)(scope);
+                elem.replaceWith(compiledContent);
 
-                angular.element(document).ready(function () {
-                    elem.skitter(options);
+                $timeout(function () {
+                  compiledContent.skitter(options);
                     scope.$on("$destroy", function () {
                         elem.skitter("destroy");
                     });
                 });
+
+               }
+
             }
+
         }
+
+        return ddo;
     }
 
     /**
