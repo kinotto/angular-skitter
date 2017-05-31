@@ -22,12 +22,12 @@
         return {
             restrict: 'EA',
             replace: true,
-            template:   '<div class="skitter skitter-large">' +
+            template:   '<div class="skitter">' +
                             '<ul>' +
                                 '<li ng-repeat="item in items">' +
                                     '<a href="{{item.url}}"><img src="{{item.src}}" /></a>' +
                                     '<div class="label_text">' +
-                                        '<p>{{item.title}}</p>' +
+                                        '<p><strong>{{item.title}}</strong></p>' +
                                         '<p>{{item.description}}</p>' +
                                     '</div>' +
                                 '</li>' +
@@ -54,7 +54,7 @@
 
     /**
     * Service that let the user injects options that will be used as base options
-    * from all the instances instances of ngSkitter directive
+    * from all the instances of ngSkitter directive
     */
     function SkitterService(){
       var sharedOptions = {};
