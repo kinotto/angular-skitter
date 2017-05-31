@@ -1,8 +1,8 @@
 {
   "name": "angular-skitter",
   "version": "1.0.0",
-  "homepage": "https://github.com/kinotto/geonames.js",
-  "description": "beautiful slider for angularJS build on top skitter.js",
+  "homepage": "https://github.com/kinotto/angular-skitter",
+  "description": "Beautiful slider for angularJS build on top skitter.js",
   "main": "src/skitter.js",
   "directories": {
     "test": "test"
@@ -15,7 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/kinotto/angular-skitter.git"
   },
-  "author": "Karim Abdelcadir <kinotto88@yahoo.it>",
+  "authors": [
+    "Karim Abdelcadir <kinotto88@yahoo.it>",
+    "Stefano Vollono <stefanovollono@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kinotto/angular-skitter/issues"
