@@ -62,6 +62,7 @@ $scope.skitterOption = {
 }
 ```
 
+## Transclude
 Puoi personalizzare l'html contenuto nel `label_skitter` per customizzare titolo e descrizione di ogni immagine. basta inserire l'html all'interno del tag `<ng-skitter`. Ti proponiamo noi un esempio completo:
 
 ```html
