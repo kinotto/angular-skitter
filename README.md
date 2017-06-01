@@ -10,12 +10,12 @@
 
 ## Usage
 
-Use angular skitter is easy as it seems
+Use angular skitter is easy as it seems :=)
 
 just decorate your html with the directive passing an option object that represents
 the configuration applied to the gallery and you're ready to go.
 
- `<ng-skitter items="photos" options="skitterOption">`. I due principali custom attribute sono `items` e `options`
+ `<ng-skitter items="photos" options="skitterOption">`
 
 Below is a valid options, only src is required for each slide, the others are optional
 
