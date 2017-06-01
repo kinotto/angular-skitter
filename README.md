@@ -15,14 +15,14 @@ A simple directive along with a configuration object and you're ready to go
 
 ### Dependencies
 
-`angular-skitter` depends on: jQuery and jQuery.easing
+`angular-skitter` depends on jQuery and jQuery.easing
 
 ## Usage
 
 Use angular skitter is pretty straight forward.
 
 just decorate your html with the directive passing an option object that represents
-the configuration applied to the gallery and you're ready to go.
+the configuration applied to the gallery.
 
 
   
@@ -77,6 +77,28 @@ the content can be added inside the directive and will be transcluded at runtime
 </ng-skitter>
 ```
 
+## Service
+if necessary is available a `SkitterService` that allow to set a default configuration valid for each instance of the `ng-skitter directive` inside the application.
+
+
+```javascript
+.controller('MyCtrl', function(SkitterService){
+  SkitterService.setOptions({animation: "cubeShow"}); 
+})
+```
+
+In this scenario:
+```html
+<ng-skitter items="photos" options="skitterOption"></ng-skitter>
+```
+skitterOption will extend the base options
+
+
 ## Available animations
 
 **Skitter has 38 different animations:** ['cube', 'cubeRandom', 'block', 'cubeStop', 'cubeStopRandom', 'cubeHide', 'cubeSize', 'horizontal', 'showBars', 'showBarsRandom', 'tube', 'fade', 'fadeFour', 'paralell', 'blind', 'blindHeight', 'blindWidth', 'directionTop', 'directionBottom', 'directionRight', 'directionLeft', 'cubeSpread', 'glassCube', 'glassBlock', 'circles', 'circlesInside', 'circlesRotate', 'cubeShow', 'upBars', 'downBars', 'hideBars', 'swapBars', 'swapBarsBack', 'swapBlocks', 'cut']
+
+
+## Credit
+
+credit to @Thiago for <a href="https://github.com/thiagosf/skitter">skitter.js</a>
