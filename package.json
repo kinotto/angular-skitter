@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha ./spec/test-server.js",
+    "test": "karma start",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
@@ -24,6 +24,7 @@
     "url": "https://github.com/kinotto/angular-skitter/issues"
   },
   "devDependencies": {
+    "angular-mocks": "^1.6.4",
     "chai": "^3.5.0",
     "connect-livereload": "^0.5.4",
     "coveralls": "^2.12.0",
@@ -47,6 +48,11 @@
     "gulp-useref": "^3.1.2",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.4",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
     "mocha": "^3.2.0",
     "nyc": "^10.1.2",
     "opener": "^1.4.1",
@@ -54,5 +60,10 @@
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "tiny-lr": "^0.2.1"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "jasmine": "^2.6.0",
+    "karma-cli": "^1.0.1"
   }
 }
