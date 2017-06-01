@@ -41,7 +41,7 @@ gulp.task('default', ['watch','express'], function() {
 
 
 
-gulp.task('dist', sync.sync(['cleanBuild', ['dist-github-page', 'dist-skitter']]), function(){
+gulp.task('dist', sync.sync(['cleanBuild', 'skitter-assets', ['dist-github-page', 'dist-skitter']]), function(){
 
 });
 

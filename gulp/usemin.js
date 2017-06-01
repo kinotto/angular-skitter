@@ -10,6 +10,11 @@ var del = require('del');
 var useref        = require('gulp-useref');
 var gulpIf        = require('gulp-if');
 
+gulp.task('skitter-assets', function(){
+  return gulp.src([config.src.skitterAssets])
+  .pipe(gulp.dest(config.dist.skitterAssets));
+})
+
 gulp.task('dist-github-page', function () {
     return gulp.src(config.src.githubPage)
       .pipe(useref())
