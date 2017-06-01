@@ -27,14 +27,14 @@ Below is a valid options, only src is required for each slide, the others are op
 $scope.photos = [
     {
         src: 'https://skitterp-4b51.kxcdn.com/images/mountains/3-sand-mountain-clouds.jpg',
-        title: 'Donec sollicitudin molestie',
-        description: 'Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.',
+        title: 'Title 1',
+        description: 'Description 1',
         url: 'http://www.google.com'
     },
     {
         src: 'https://skitterp-4b51.kxcdn.com/images/mountains/4-landscape-with-tree-hills-and-lake.jpg',
-        title: 'Vivamus suscipit tortor',
-        description: 'Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.',
+        title: 'Title 2',
+        description: 'Description 2',
         url: 'http://www.facebook.com'
     }
 ]
