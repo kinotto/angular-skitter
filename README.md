@@ -2,6 +2,13 @@
 
 [![Build Status](https://travis-ci.org/kinotto/angular-skitter.svg?branch=master)](https://travis-ci.org/kinotto/angular-skitter) [![Coverage Status](https://coveralls.io/repos/github/kinotto/angular-skitter/badge.svg)](https://coveralls.io/github/kinotto/angular-skitter)
 
+
+<img src="http://res.cloudinary.com/ddbdqb6js/image/upload/v1496330642/skitter_01.png" />
+
+Angular skitter is a library build on top the great jQuery library <a href="https://skitter-slider.net/">skitter.js</a> . angular skitter is no more than a wrapper , expose all the functionality of skitter.js inside an angular component.
+
+A simple directive along with a configuration object and you're ready to go 
+
 ## Bower Install
 
 `bower install angular-skitter --save`
