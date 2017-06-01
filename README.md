@@ -2,19 +2,22 @@
 
 ## Bower Install
 
-`bower install skitter --save`
-
 `bower install angular-skitter --save`
 
 ## Dependencies
 
-`angular-skitter` ha come dipendenze jQuery, jQuery.easing e Angular.
+`angular-skitter` depends on: jQuery, jQuery.easing .
 
 ## Usage
 
-Abbiamo predisposto una direttiva per includere facilmente la gallery `<ng-skitter items="photos" options="skitterOption">`. I due principali custom attribute sono `items` e `options`
+Use angular skitter is easy as it seems
 
-Items definisce la la base dati per la gallery, per esempio:
+just decorate your html with the directive passing an option object that represents
+the configuration applied to the gallery and you're ready to go.
+
+ `<ng-skitter items="photos" options="skitterOption">`. I due principali custom attribute sono `items` e `options`
+
+Below is a valid options, only src is required for each slide, the others are optional
 
 <pre>$scope.photos = [
     {
@@ -32,7 +35,9 @@ Items definisce la la base dati per la gallery, per esempio:
 ]
                 </pre>
 
-Option definisce le configurazioni applicabili alla gallery. Per tutte le configurazioni disponibili ti rimandiamo alla [documentazione ufficiale di skitter](https://skitter-slider.net/options.html)
+
+The list of available configurations are here: [documentazione ufficiale di skitter](https://skitter-slider.net/options.html)
+
 
 <pre>$scope.skitterOption = {
     auto_play: false,
