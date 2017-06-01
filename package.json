@@ -8,8 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "karma start",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
