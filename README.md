@@ -13,6 +13,16 @@ A simple directive along with a configuration object and you're ready to go
 
 `bower install angular-skitter --save`
 
+import the script in your html:
+
+```html
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+    <script src="../bower_components/skitter-slideshow/dist/jquery.skitter.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+ ```
+
+
 ### Dependencies
 
 `angular-skitter` depends on jQuery and jQuery.easing
