@@ -1,9 +1,10 @@
 module.exports = {
 	dist: {
-		app: 'dist'
+		app: 'dist',
+		githubPage: 'github-page'
 	},
 	src: {
-		lib: 'src/skitter.js'
+		lib: 'src/skitter.js',
+		githubPage: 'example/index.html'
 	}
 };
-

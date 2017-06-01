@@ -27,7 +27,7 @@
   "dependencies": {
     "angular": "^1.6.4",
     "jquery": "^3.2.1",
-    "skitter-slideshow": "skitter#^5.0.2",
-    "jquery-easing": "*"
+    "jquery-easing": "*",
+    "skitter-slideshow": "skitter#^5.0.3"
   }
 }

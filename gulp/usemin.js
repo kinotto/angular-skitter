@@ -7,8 +7,17 @@ var rev = require('gulp-rev');
 var config = require('./config');
 var rename = require("gulp-rename");
 var del = require('del');
+var useref        = require('gulp-useref');
+var gulpIf        = require('gulp-if');
 
-gulp.task('usemin', function() {
+gulp.task('dist-github-page', function () {
+    return gulp.src(config.src.githubPage)
+      .pipe(useref())
+      //.pipe(gulpIf('*.js', uglify()))
+      .pipe(gulp.dest(config.dist.githubPage));
+});
+
+gulp.task('dist-skitter', function() {
   return gulp.src(config.src.lib)
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
