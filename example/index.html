@@ -13,7 +13,7 @@
         h1, h3 {font-family: 'Roboto Condensed', sans-serif}
         h1 {font-weight: 800}
         h3 {font-weight: 300}
-        .demo-01 .skitter {margin: 20px auto;max-width: 1000px;border: 10px solid #f5f5f5;box-shadow: 0 0 5px 2px rgba(163, 155, 139, 0.36)}
+        .demo-01 .skitter {margin: 40px auto 80px;max-width: 1170px;border: 10px solid #f5f5f5;box-shadow: 0 0 5px 2px rgba(163, 155, 139, 0.36)}
         .demo-01 .label_skitter p:first-child {margin: 0;padding: 0 10px;font-size: 120%;}
     </style>
 </head>
@@ -30,6 +30,57 @@
                     <p><strong>{{item.title}}</strong></p>
                     <p>{{item.description}}</p>
                 </ng-skitter>
+
+                <h2>Bower Install</h2>
+                <p><code>bower install skitter --save</code></p>
+                <p><code>bower install angular-skitter --save</code></p>
+
+                <h2>Dependencies</h2>
+                <p><code>angular-skitter</code> ha come dipendenze jQuery, jQuery.easing e Angular.</p>
+
+                <h2>Usage</h2>
+                <p>Abbiamo predisposto una direttiva per includere facilmente la gallery <code>&lt;ng-skitter items=&quot;photos&quot; options=&quot;skitterOption&quot;&gt;</code>. I due principali custom attribute sono <code>items</code> e <code>options</code></p>
+
+
+                <p>Items definisce la la base dati per la gallery, per esempio:</p>
+                <pre>
+$scope.photos = [
+    {
+        src: 'https://skitterp-4b51.kxcdn.com/images/mountains/3-sand-mountain-clouds.jpg',
+        title: 'Donec sollicitudin molestie',
+        description: 'Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.',
+        url: 'http://www.google.com'
+    },
+    {
+        src: 'https://skitterp-4b51.kxcdn.com/images/mountains/4-landscape-with-tree-hills-and-lake.jpg',
+        title: 'Vivamus suscipit tortor',
+        description: 'Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.',
+        url: 'http://www.facebook.com'
+    }
+]
+                </pre>
+                <p>Option definisce le configurazioni applicabili alla gallery. Per tutte le configurazioni disponibili ti rimandiamo alla <a href="https://skitter-slider.net/options.html">documentazione ufficiale di skitter</a></p>
+                <pre>
+$scope.skitterOption = {
+    auto_play: false,
+    theme: "clean",
+    navigation: true,
+    animation: "cubeShow",
+    dots: true
+}
+                </pre>
+
+                <p>Puoi personalizzare l'html contenuto nel <code>label_skitter</code> per customizzare titolo e descrizione di ogni immagine. basta inserire l'html all'interno del tag <code>&lt;ng-skitter</code>. Ti proponiamo noi un esempio completo: </p>
+                <pre ng-non-bindable>
+&lt;ng-skitter items=&quot;photos&quot; options=&quot;skitterOption&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;{{item.title}}&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;{{item.description}}&lt;/p&gt;
+&lt;/ng-skitter&gt;
+                </pre>
+
+                <h2>Available animations</h2>
+                <p><strong>Skitter has 38 different animations:</strong> ['cube', 'cubeRandom', 'block', 'cubeStop', 'cubeStopRandom', 'cubeHide', 'cubeSize', 'horizontal', 'showBars', 'showBarsRandom', 'tube', 'fade', 'fadeFour', 'paralell', 'blind', 'blindHeight', 'blindWidth', 'directionTop', 'directionBottom', 'directionRight', 'directionLeft', 'cubeSpread', 'glassCube', 'glassBlock', 'circles', 'circlesInside', 'circlesRotate', 'cubeShow', 'upBars', 'downBars', 'hideBars', 'swapBars', 'swapBarsBack', 'swapBlocks', 'cut']</p>
+
             </div>
         </div>
     </div>
