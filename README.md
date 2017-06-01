@@ -15,11 +15,16 @@ Use angular skitter is easy as it seems
 just decorate your html with the directive passing an option object that represents
 the configuration applied to the gallery and you're ready to go.
 
- `<ng-skitter items="photos" options="skitterOption">`. I due principali custom attribute sono `items` e `options`
+
+  
+```html
+<ng-skitter items="photos" options="skitterOption"></ng-skitter>
+```
 
 Below is a valid options, only src is required for each slide, the others are optional
 
-<pre>$scope.photos = [
+```javascript
+$scope.photos = [
     {
         src: 'https://skitterp-4b51.kxcdn.com/images/mountains/3-sand-mountain-clouds.jpg',
         title: 'Donec sollicitudin molestie',
@@ -33,28 +38,29 @@ Below is a valid options, only src is required for each slide, the others are op
         url: 'http://www.facebook.com'
     }
 ]
-                </pre>
+```
 
 
 The list of available configurations are here: [documentazione ufficiale di skitter](https://skitter-slider.net/options.html)
 
-
-<pre>$scope.skitterOption = {
+```javascript
+$scope.skitterOption = {
     auto_play: false,
     theme: "clean",
     navigation: true,
     animation: "cubeShow",
     dots: true
 }
-                </pre>
+```
 
 Puoi personalizzare l'html contenuto nel `label_skitter` per customizzare titolo e descrizione di ogni immagine. basta inserire l'html all'interno del tag `<ng-skitter`. Ti proponiamo noi un esempio completo:
 
+```html
 <pre ng-non-bindable=""><ng-skitter items="photos" options="skitterOption">
     <p><strong>{{item.title}}</strong></p>
     <p>{{item.description}}</p>
 </ng-skitter>
-                </pre>
+```
 
 ## Available animations
 
