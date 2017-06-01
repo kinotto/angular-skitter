@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/kinotto/angular-skitter.svg?branch=master)](https://travis-ci.org/kinotto/angular-skitter) [![Coverage Status](https://coveralls.io/repos/github/kinotto/angular-skitter/badge.svg)](https://coveralls.io/github/kinotto/angular-skitter)
 
 
-<img src="http://res.cloudinary.com/ddbdqb6js/image/upload/v1496330642/skitter_01.png" />
+<a href="https://kinotto.github.io/angular-skitter/github-page/"> <img src="http://res.cloudinary.com/ddbdqb6js/image/upload/v1496330642/skitter_01.png" /></a>
 
 Angular skitter is a library build on top the great jQuery library <a href="https://skitter-slider.net/">skitter.js</a> . angular skitter is no more than a wrapper , expose all the functionality of skitter.js inside an angular component.
 
@@ -102,6 +102,10 @@ In this scenario:
 ```
 skitterOption will extend the base options
 
+
+## Examples
+
+<a href="https://kinotto.github.io/angular-skitter/github-page/"><b>Demo</b></a>
 
 ## Available animations
 
