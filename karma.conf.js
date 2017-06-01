@@ -15,12 +15,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/jquery.easing/js/jquery.easing.js',
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      //'bower_components/jquery/dist/jquery.js',
-      //'bower_components/jquery.easing/js/jquery.easing.js'
-      //'bower_components/skitter-slideshow/src/jquery.skitter.js'
-      'dist/js/skitter.min.js',
+      'bower_components/skitter-slideshow/src/jquery.skitter.js',
+      'src/skitter.js',
       'spec/test.js'
     ],
 

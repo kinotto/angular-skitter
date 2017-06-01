@@ -39,7 +39,8 @@
               var transclude = tElement.html();
               var tpl = angular.element(template);
               tpl.find('.label_text').append(transclude);
-
+              tElement.html(tpl.html());
+              
               return function(scope, elem, attrs) {
 
                 var sharedOptions = SkitterService.getOptions();

@@ -38,17 +38,19 @@
             src: 'https://skitterp-4b51.kxcdn.com/images/mountains/4-landscape-with-tree-hills-and-lake.jpg'
         }
       ]
-      var element = $compile('<ng-skitter items="items"></ng-skitter>')($rootScope);
+      var element = $compile('<ng-skitter items="items"><p>ciao</p></ng-skitter>')($rootScope);
 
       $rootScope.$digest();
 
+      expect(element.html()).toContain('<div class="label_text">');
 
-      $timeout(function(){
-        console.log('element: ' + element.html());
-        expect(element.html()).toContain('<div class="label_text">');
-      }, 200)
+      //$timeout(function(){
 
-      $timeout.flush();
+        //expect(element.html()).toContain('<div class="label_text">');
+      //}, 200)
+
+    //  $timeout.flush();
+
     })
 
   })
