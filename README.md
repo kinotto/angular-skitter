@@ -65,7 +65,7 @@ The list of available configurations are here: [official skitter documentation](
 ## Transclude
 Angular skitter let the user decide how to customize the gallery, by defining a custom html to add a title, description and if necessary a custom css 
 
-the content can be added inside the directive and will be transcluded at runtime. available in the scope of the content will be the {{item} the {{$index}}.
+the content can be added inside the directive and will be transcluded at runtime. available in the scope of the content will be the `{{item}` the `{{$index}}`.
 
 
 ```html
