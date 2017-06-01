@@ -46,10 +46,9 @@ gulp.task('default', ['watch','express'], function() {
 
 gulp.task('dist', function (callback) {
     return gulp
-        .src('examples/*.html')
+        .src('example/index.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulpIf('*.html', htmlmin({collapseWhitespace: true, minifyCSS:true})))
         .pipe(gulp.dest('dist'))
 });
 
