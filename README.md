@@ -13,13 +13,13 @@ A simple directive along with a configuration object and you're ready to go
 
 `bower install angular-skitter --save`
 
-## Dependencies
+### Dependencies
 
-`angular-skitter` depends on: jQuery, jQuery.easing .
+`angular-skitter` depends on: jQuery and jQuery.easing
 
 ## Usage
 
-Use angular skitter is easy as it seems
+Use angular skitter is pretty straight forward.
 
 just decorate your html with the directive passing an option object that represents
 the configuration applied to the gallery and you're ready to go.
@@ -50,8 +50,6 @@ $scope.photos = [
 ```
 
 
-The list of available configurations are here: [documentazione ufficiale di skitter](https://skitter-slider.net/options.html)
-
 ```javascript
 $scope.skitterOption = {
     auto_play: false,
@@ -62,13 +60,20 @@ $scope.skitterOption = {
 }
 ```
 
+The list of available configurations are here: [official skitter documentation](https://skitter-slider.net/options.html)
+
 ## Transclude
-Puoi personalizzare l'html contenuto nel `label_skitter` per customizzare titolo e descrizione di ogni immagine. basta inserire l'html all'interno del tag `<ng-skitter`. Ti proponiamo noi un esempio completo:
+Angular skitter let the user decide how to customize the gallery, by defining a custom html to add a title, description and if necessary a custom css 
+
+the content can be added inside the directive and will be transcluded at runtime. available in the scope of the content will be the {{item} the {{$index}}.
+
 
 ```html
-<pre ng-non-bindable=""><ng-skitter items="photos" options="skitterOption">
-    <p><strong>{{item.title}}</strong></p>
+<ng-skitter items="photos" options="skitterOption">
+    <!-- this spot is free to be customized as you want-->
+    <p><strong>{{item.title}}</strong></p> 
     <p>{{item.description}}</p>
+    <p> {{$index}}
 </ng-skitter>
 ```
 
