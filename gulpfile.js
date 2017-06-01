@@ -44,12 +44,10 @@ gulp.task('default', ['watch','express'], function() {
 
 //});
 
-gulp.task('dist', function (callback) {
+gulp.task('dist', ['cleanBuild'], function (callback) {
     return gulp
         .src('example/index.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulp.dest('dist'))
 });
-
-
