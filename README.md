@@ -1,5 +1,7 @@
 # angular-skitter
 
+[![Build Status](https://travis-ci.org/kinotto/angular-skitter.svg?branch=master)](https://travis-ci.org/kinotto/angular-skitter) [![Coverage Status](https://coveralls.io/repos/github/kinotto/angular-skitter/badge.svg)](https://coveralls.io/github/kinotto/angular-skitter)
+
 ## Bower Install
 
 `bower install angular-skitter --save`
