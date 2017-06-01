@@ -18,8 +18,7 @@ import the script in your html:
 ```html
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/jquery.easing/js/jquery.easing.min.js"></script>
-<script src="../bower_components/skitter-slideshow/dist/jquery.skitter.min.js"></script>
-<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-skitter/dist/skitter.min.js"></script>
  ```
 
 
