@@ -54,12 +54,8 @@
     "karma-coveralls": "^1.1.2",
     "karma-firefox-launcher": "^1.0.1",
     "karma-jasmine": "^1.1.0",
-    "mocha": "^3.2.0",
-    "nyc": "^10.1.2",
     "opener": "^1.4.1",
     "require-dir": "^0.3.1",
-    "sinon": "^1.17.7",
-    "sinon-chai": "^2.8.0",
     "tiny-lr": "^0.2.1"
   },
   "dependencies": {

@@ -21,13 +21,18 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
       'bower_components/skitter-slideshow/src/jquery.skitter.js',
       'src/skitter.js',
-      'spec/test.js'
+      'spec/spec.js'
     ],
 
 
     // list of files to exclude
     exclude: [
     ],
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['coverage', 'coveralls'],
 
 
     // preprocess matching files before serving them to the browser
@@ -36,14 +41,9 @@ module.exports = function(config) {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
-  
+      'spec/*.js': ['coverage']
     },
 
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'coverage', 'coveralls'],
 
     // optionally, configure the reporter
     coverageReporter: {
