@@ -9,7 +9,7 @@ Angular skitter is a library build on top the great jQuery library <a href="http
 
 A simple directive along with a configuration object and you're ready to go 
 
-## Bower Install
+## Installation
 
 `bower install angular-skitter --save`
 
@@ -21,10 +21,6 @@ import the script in your html:
 <script src="../bower_components/angular-skitter/dist/skitter.min.js"></script>
  ```
 
-
-### Dependencies
-
-`angular-skitter` depends on jQuery and jQuery.easing
 
 ## Usage
 
@@ -39,7 +35,7 @@ the configuration applied to the gallery.
 <ng-skitter items="photos" options="skitterOption"></ng-skitter>
 ```
 
-Below is a valid options, only src is required for each slide, the others are optional
+Below a valid configuration, only src is required for each slide, the others are optional
 
 ```javascript
 $scope.photos = [
