@@ -22,7 +22,11 @@ import the script in your html:
 <script src="/bower_components/skitter-slideshow/dist/jquery.skitter.min.js"></script>
 <script src="/bower_components/angular-skitter/dist/skitter.min.js"></script>
  ```
-
+ 
+ and the module as a dependency
+ ```javascript
+angular.module('myApp', ['skitter']);
+```
 
 ## Usage
 
