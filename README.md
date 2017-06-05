@@ -76,9 +76,8 @@ the content can be added inside the directive and will be transcluded at runtime
 ```html
 <ng-skitter items="photos" options="skitterOption">
     <!-- this spot is free to be customized as you want-->
-    <p><strong>{{item.title}}</strong></p> 
+    <p><strong>#{{$index}} {{item.title}}</strong></p> 
     <p>{{item.description}}</p>
-    <p> {{$index}}
 </ng-skitter>
 ```
 
