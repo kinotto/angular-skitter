@@ -5,7 +5,7 @@
 
 <a href="https://kinotto.github.io/angular-skitter/github-page/"> <img src="http://res.cloudinary.com/ddbdqb6js/image/upload/v1496330642/skitter_01.png" /></a>
 
-Angular skitter is a library build on top the great jQuery library <a href="https://skitter-slider.net/">skitter.js</a> . angular skitter is no more than a wrapper , expose all the functionality of skitter.js inside an angular component.
+Angular skitter is a responsive and customizable image gallery. The library is extremely flexible, built on top <a href="https://skitter-slider.net/">skitter.js</a> . angular skitter is no more than a wrapper , expose all the functionality of skitter.js inside an angular component.
 
 A simple directive along with a configuration object and you're ready to go 
 
