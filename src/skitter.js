@@ -23,7 +23,8 @@
         var template = '<div class="skitter">' +
                          '<ul>' +
                             '<li ng-repeat="item in items">' +
-                                '<a href="{{item.url}}"><img src="{{item.src}}" /></a>' +
+                                '<a ng-if="item.url" href="{{item.url}}"><img src="{{item.src}}" /></a>' +
+                                '<img ng-if="!item.url" src="{{item.src}}" />' +
                                 '<div class="label_text">' +
                                 '</div>' +
                             '</li>' +
@@ -36,26 +37,31 @@
                 options: '='
             },
             compile: function(tElement, tAttributes, transclude){
+
               var transclude = tElement.html();
               var tpl = angular.element(template);
               tpl.find('.label_text').append(transclude);
+              SkitterService.setTemplate(tpl);
+              var container = angular.element("<div></div>");
               tElement.html(tpl.html());
-              
+
               return function(scope, elem, attrs) {
 
-                var sharedOptions = SkitterService.getOptions();
-                var options = $.extend(sharedOptions, scope.options || {});
-                var compiledContent = $compile(tpl)(scope);
-                elem.replaceWith(compiledContent);
+                    elem.replaceWith(container);
 
-                $timeout(function () {
-                  compiledContent.skitter(options);
-                    scope.$on("$destroy", function () {
-                        elem.skitter("destroy");
-                    });
-                });
+                     scope.$watch('[items, options]', function(newVal, oldVal){
+                        var sharedOptions = SkitterService.getOptions();
+                        var options = $.extend(sharedOptions, scope.options || {});
+                        var skitterEl = $compile(SkitterService.getTemplate())(scope);
+                        container.html(skitterEl);
+                        $timeout(function(){
+                            skitterEl.skitter(options);
+                        })
 
-               }
+
+                    }, true);
+
+              }
 
             }
 
@@ -69,7 +75,7 @@
     * from all the instances of ngSkitter directive
     */
     function SkitterService(){
-      var sharedOptions = {};
+      var sharedOptions = {}, template = {};
 
       this.setOptions = function(opt){
           sharedOptions = opt || {};
@@ -79,6 +85,12 @@
         return angular.copy(sharedOptions);
       }
 
+      this.setTemplate = function(tpl){
+          template = tpl;
+      }
+      this.getTemplate = function(){
+          return angular.copy(template);
+      }
     }
 
 })(window.angular, window.$);
