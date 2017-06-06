@@ -1,6 +1,6 @@
 {
   "name": "angular-skitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/kinotto/angular-skitter",
   "description": "Beautiful slider for angularJS build on top skitter.js",
   "main": "src/skitter.js",
