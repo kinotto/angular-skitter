@@ -1,6 +1,6 @@
 {
   "name": "angular-skitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "www.karimabdelcadir.com",
   "description": "slider directive for angular based on jQuery Skitter",
   "authors": [
