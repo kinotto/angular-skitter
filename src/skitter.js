@@ -23,8 +23,7 @@
         var template = '<div class="skitter">' +
                          '<ul>' +
                             '<li ng-repeat="item in items">' +
-                                '<a ng-if="item.url" href="{{item.url}}"><img src="{{item.src}}" /></a>' +
-                                '<img ng-if="!item.url" src="{{item.src}}" />' +
+                                '<a href="{{item.url}}"><img src="{{item.src}}" /></a>' +
                                 '<div class="label_text">' +
                                 '</div>' +
                             '</li>' +
