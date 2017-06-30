@@ -39,13 +39,13 @@
                 <p><code>bower install angular-skitter --save</code></p>
 
                 <h2>Dependencies</h2>
-                <p><code>angular-skitter</code> ha come dipendenze jQuery, jQuery.easing e Angular.</p>
+                <p><code>angular-skitter</code> depends on: jQuery, jQuery.easing and Angular.</p>
 
                 <h2>Usage</h2>
-                <p>Abbiamo predisposto una direttiva per includere facilmente la gallery <code>&lt;ng-skitter items=&quot;photos&quot; options=&quot;skitterOption&quot;&gt;</code>. I due principali custom attribute sono <code>items</code> e <code>options</code></p>
+                <p>We manage to create a directive to easily create a gallery <code>&lt;ng-skitter items=&quot;photos&quot; options=&quot;skitterOption&quot;&gt;</code>. </p>
 
 
-                <p>Items definisce la la base dati per la gallery, per esempio:</p>
+                <p>Items defines the source pictures for the gallery</p>
                 <pre>
 $scope.photos = [
     {
@@ -62,7 +62,7 @@ $scope.photos = [
     }
 ]
                 </pre>
-                <p>Option definisce le configurazioni applicabili alla gallery. Per tutte le configurazioni disponibili ti rimandiamo alla <a href="https://skitter-slider.net/options.html">documentazione ufficiale di skitter</a></p>
+                <p>Options defines the configuration to apply to the gallery. All available options are listed in the official doc <a href="https://skitter-slider.net/options.html"><b>here</b></a></p>
                 <pre>
 $scope.skitterOption = {
     auto_play: false,
@@ -73,7 +73,7 @@ $scope.skitterOption = {
 }
                 </pre>
 
-                <p>Puoi personalizzare l'html contenuto nel <code>label_skitter</code> per customizzare titolo e descrizione di ogni immagine. basta inserire l'html all'interno del tag <code>&lt;ng-skitter</code>. Ti proponiamo noi un esempio completo: </p>
+                <p>You can customize the html adding for example title and description inside each image. just insert your custom html inside the tag<code>&lt;ng-skitter&gt;</code>.</p>
                 <pre ng-non-bindable>
 &lt;ng-skitter items=&quot;photos&quot; options=&quot;skitterOption&quot;&gt;
     &lt;p&gt;&lt;strong&gt;{{item.title}}&lt;/strong&gt;&lt;/p&gt;
