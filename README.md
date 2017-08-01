@@ -7,11 +7,13 @@
 
 Angular skitter is a responsive and customizable image gallery. The library is extremely flexible, built on top <a href="https://skitter-slider.net/">skitter.js</a> . angular skitter is no more than a wrapper , expose all the functionality of skitter.js inside an angular component.
 
-A simple directive along with a configuration object and you're ready to go 
+A simple directive along with a configuration object and you're ready to go
 
 ## Installation
 
 `bower install angular-skitter --save`
+
+`npm install angular-skitter --save`
 
 import the script in your html:
 
@@ -22,7 +24,7 @@ import the script in your html:
 <script src="/bower_components/skitter-slideshow/dist/jquery.skitter.min.js"></script>
 <script src="/bower_components/angular-skitter/dist/skitter.min.js"></script>
  ```
- 
+
  and the module as a dependency
  ```javascript
 angular.module('myApp', ['skitter']);
@@ -36,7 +38,7 @@ just decorate your html with the directive passing an option object that represe
 the configuration applied to the gallery.
 
 
-  
+
 ```html
 <ng-skitter items="photos" options="skitterOption"></ng-skitter>
 ```
@@ -74,7 +76,7 @@ $scope.skitterOption = {
 The list of available configurations are here: [official skitter documentation](https://skitter-slider.net/options.html)
 
 ## Transclude
-Angular skitter let the user decide how to customize the gallery, by defining a custom html to add a title, description and if necessary a custom css 
+Angular skitter let the user decide how to customize the gallery, by defining a custom html to add a title, description and if necessary a custom css
 
 the content can be added inside the directive and will be transcluded at runtime. available in the scope of the content will be the `item` the `$index`.
 
@@ -82,7 +84,7 @@ the content can be added inside the directive and will be transcluded at runtime
 ```html
 <ng-skitter items="photos" options="skitterOption">
     <!-- this spot is free to be customized as you want-->
-    <p><strong>#{{$index}} {{item.title}}</strong></p> 
+    <p><strong>#{{$index}} {{item.title}}</strong></p>
     <p>{{item.description}}</p>
 </ng-skitter>
 ```
@@ -93,7 +95,7 @@ if necessary is available a `SkitterService` that allow to set a default configu
 
 ```javascript
 .controller('MyCtrl', function(SkitterService){
-  SkitterService.setOptions({animation: "cubeShow"}); 
+  SkitterService.setOptions({animation: "cubeShow"});
 })
 ```
 

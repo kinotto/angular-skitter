@@ -2,7 +2,7 @@
   "name": "angular-skitter",
   "version": "1.0.2",
   "homepage": "https://github.com/kinotto/angular-skitter",
-  "description": "Beautiful slider for angularJS build on top skitter.js",
+  "description": "awesome slider for angularJS build on top skitter.js",
   "main": "src/skitter.js",
   "directories": {
     "test": "test"
@@ -26,7 +26,7 @@
     "angular-mocks": "^1.6.4",
     "chai": "^3.5.0",
     "connect-livereload": "^0.5.4",
-    "coveralls": "^2.12.0",
+    "coveralls": "^2.13.1",
     "del": "^2.2.2",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
@@ -56,13 +56,15 @@
     "karma-jasmine": "^1.1.0",
     "opener": "^1.4.1",
     "require-dir": "^0.3.1",
-    "tiny-lr": "^0.2.1"
-  },
-  "dependencies": {
-    "angular": "^1.6.4",
-    "coveralls": "^2.13.1",
+    "tiny-lr": "^0.2.1",
     "jasmine": "^2.6.0",
     "karma-cli": "^1.0.1",
     "nyc": "^10.3.2"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "jquery": "^3.2.1",
+    "jquery-easing": "0.0.1",
+    "skitter-slider": "^5.1.4"
   }
 }
